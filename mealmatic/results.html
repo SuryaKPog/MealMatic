@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Meal Plan - MealMatic</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <i class="fas fa-utensils"></i>
+          <h1>MealMatic</h1>
+        </a>
+        <div class="header-buttons">
+          <button class="btn btn-outline btn-sm">
+            <i class="fas fa-print"></i> Print
+          </button>
+          <button class="btn btn-outline btn-sm">
+            <i class="fas fa-download"></i> Save
+          </button>
+          <button class="btn btn-outline btn-sm">
+            <i class="fas fa-share"></i> Share
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="back-link">
+      <a href="meal-planner.html">
+        <i class="fas fa-arrow-left"></i> Back to Meal Planner
+      </a>
+    </div>
+    
+    <div class="results-container">
+      <div class="results-card">
+        <h1>Your Personalized Meal Plan</h1>
+        <p class="results-description">Hi <span id="user-name">User</span>, here's your custom meal plan based on your preferences and goals.</p>
+        
+        <div class="nutrition-summary">
+          <div class="nutrition-item">
+            <p>Daily Average</p>
+            <h3 id="daily-calories">2100 kcal</h3>
+          </div>
+          <div class="nutrition-item">
+            <p>Protein</p>
+            <h3 id="daily-protein">95g</h3>
+          </div>
+          <div class="nutrition-item">
+            <p>Carbs</p>
+            <h3 id="daily-carbs">220g</h3>
+          </div>
+          <div class="nutrition-item">
+            <p>Fat</p>
+            <h3 id="daily-fat">70g</h3>
+          </div>
+        </div>
+        
+        <div class="tabs">
+          <div class="tab-list" id="day-tabs">
+            <button class="tab-button active" data-day="monday">Mon</button>
+            <button class="tab-button" data-day="tuesday">Tue</button>
+            <button class="tab-button" data-day="wednesday">Wed</button>
+            <button class="tab-button" data-day="thursday">Thu</button>
+            <button class="tab-button" data-day="friday">Fri</button>
+            <button class="tab-button" data-day="saturday">Sat</button>
+            <button class="tab-button" data-day="sunday">Sun</button>
+          </div>
+          
+          <div class="tab-content">
+            <div class="tab-pane active" id="monday">
+              <div class="day-header">
+                <h2><i class="fas fa-calendar"></i> Monday</h2>
+                <div class="day-total">
+                  <span>Total: </span>
+                  <span class="day-calories">1950 kcal</span>
+                </div>
+              </div>
+              
+              <div class="meal-grid">
+                <!-- Breakfast -->
+                <div class="meal-card">
+                  <div class="meal-header">
+                    <div>
+                      <span class="meal-badge">Breakfast</span>
+                      <h3>Avocado Toast with Poached Eggs</h3>
+                    </div>
+                    <span class="calories-badge">420 kcal</span>
+                  </div>
+                  <div class="meal-content">
+                    <div class="meal-nutrients">
+                      <div class="nutrient">
+                        <p>Protein</p>
+                        <p class="nutrient-value">18g</p>
+                      </div>
+                      <div class="nutrient">
+                        <p>Carbs</p>
+                        <p class="nutrient-value">35g</p>
+                      </div>
+                      <div class="nutrient">
+                        <p>Fat</p>
+                        <p class="nutrient-value">25g</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="meal-footer">
+                    <button class="btn btn-outline btn-sm btn-full">View Recipe</button>
+                  </div>
+                </div>
+                
+                <!-- Lunch -->
+                <div class="meal-card">
+                  <div class="meal-header">
+                    <div>
+                      <span class="meal-badge">Lunch</span>
+                      <h3>Quinoa Salad with Grilled Chicken</h3>
+                    </div>
+                    <span class="calories-badge">520 kcal</span>
+                  </div>
+                  <div class="meal-content">
+                    <div class="meal-nutrients">
+                      <div class="nutrient">
+                        <p>Protein</p>
+                        <p class="nutrient-value">32g</p>
+                      </div>
+                      <div class="nutrient">
+                        <p>Carbs</p>
+                        <p class="nutrient-value">45g</p>
+                      </div>
+                      <div class="nutrient">
+                        <p>Fat</p>
+                        <p class="nutrient-value">22g</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="meal-footer">
+                    <button class="btn btn-outline btn-sm btn-full">View Recipe</button>
+                  </div>
+                </div>
+                
+                <!-- Dinner -->
+                <div class="meal-card">
+                  <div class="meal-header">
+                    <div>
+                      <span class="meal-badge">Dinner</span>
+                      <h3>Grilled Salmon with Roasted Vegetables</h3>
+                    </div>
+                    <span class="calories-badge">550 kcal</span>
+                  </div>
+                  <div class="meal-content">
+                    <div class="meal-nutrients">
+                      <div class="nutrient">
+                        <p>Protein</p>
+                        <p class="nutrient-value">38g</p>
+                      </div>
+                      <div class="nutrient">
+                        <p>Carbs</p>
+                        <p class="nutrient-value">30g</p>
+                      </div>
+                      <div class="nutrient">
+                        <p>Fat</p>
+                        <p class="nutrient-value">28g</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="meal-footer">
+                    <button class="btn btn-outline btn-sm btn-full">View Recipe</button>
+                  </div>
+                </div>
+                
+                <!-- Snack -->
+                <div class="meal-card">
+                  <div class="meal-header">
+                    <div>
+                      <span class="meal-badge">Snack</span>
+                      <h3>Greek Yogurt with Honey</h3>
+                    </div>
+                    <span class="calories-badge">180 kcal</span>
+                  </div>
+                  <div class="meal-content">
+                    <div class="meal-nutrients">
+                      <div class="nutrient">
+                        <p>Protein</p>
+                        <p class="nutrient-value">15g</p>
+                      </div>
+                      <div class="nutrient">
+                        <p>Carbs</p>
+                        <p class="nutrient-value">20g</p>
+                      </div>
+                      <div class="nutrient">
+                        <p>Fat</p>
+                        <p class="nutrient-value">5g</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="meal-footer">
+                    <button class="btn btn-outline btn-sm btn-full">View Recipe</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Other days would be populated by JavaScript -->
+            <div class="tab-pane" id="tuesday"></div>
+            <div class="tab-pane" id="wednesday"></div>
+            <div class="tab-pane" id="thursday"></div>
+            <div class="tab-pane" id="friday"></div>
+            <div class="tab-pane" id="saturday"></div>
+            <div class="tab-pane" id="sunday"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="results-card">
+        <h2>Grocery List</h2>
+        
+        <div class="grocery-grid">
+          <div class="grocery-category">
+            <h3>Fruits & Vegetables</h3>
+            <ul class="grocery-list">
+              <li>
+                <input type="checkbox" id="grocery-1">
+                <label for="grocery-1">Spinach (2 bunches)</label>
+              </li>
+              <li>
+                <input type="checkbox" id="grocery-2">
+                <label for="grocery-2">Avocados (3)</label>
+              </li>
+              <li>
+                <input type="checkbox" id="grocery-3">
+                <label for="grocery-3">Sweet Potatoes (4)</label>
+              </li>
+              <li>
+                <input type="checkbox" id="grocery-4">
+                <label for="grocery-4">Broccoli (1 head)</label>
+              </li>
+              <li>
+                <input type="checkbox" id="grocery-5">
+                <label for="grocery-5">Mixed Berries (1 pack)</label>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="grocery-category">
+            <h3>Proteins</h3>
+            <ul class="grocery-list">
+              <li>
+                <input type="checkbox" id="grocery-6">
+                <label for="grocery-6">Chicken Breast (1 kg)</label>
+              </li>
+              <li>
+                <input type="checkbox" id="grocery-7">
+                <label for="grocery-7">Salmon Fillets (4)</label>
+              </li>
+              <li>
+                <input type="checkbox" id="grocery-8">
+                <label for="grocery-8">Greek Yogurt (500g)</label>
+              </li>
+              <li>
+                <input type="checkbox" id="grocery-9">
+                <label for="grocery-9">Tofu (1 pack)</label>
+              </li>
+              <li>
+                <input type="checkbox" id="grocery-10">
+                <label for="grocery-10">Eggs (12)</label>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="grocery-category">
+            <h3>Grains & Others</h3>
+            <ul class="grocery-list">
+              <li>
+                <input type="checkbox" id="grocery-11">
+                <label for="grocery-11">Quinoa (500g)</label>
+              </li>
+              <li>
+                <input type="checkbox" id="grocery-12">
+                <label for="grocery-12">Brown Rice (1 kg)</label>
+              </li>
+              <li>
+                <input type="checkbox" id="grocery-13">
+                <label for="grocery-13">Whole Grain Bread (1 loaf)</label>
+              </li>
+              <li>
+                <input type="checkbox" id="grocery-14">
+                <label for="grocery-14">Almond Butter (1 jar)</label>
+              </li>
+              <li>
+                <input type="checkbox" id="grocery-15">
+                <label for="grocery-15">Olive Oil (1 bottle)</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="download-button">
+        <button class="btn btn-primary">
+          <i class="fas fa-download"></i> Download Complete Meal Plan
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="results.js"></script>
+</body>
+</html>
